@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique | Chic Au Quotidien</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="shop" data-filter="all">
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="img/logo.jpeg" alt="Logo Chic Au Quotidien"><strong>Chic Au Quotidien</strong></a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="#collections">Collections</a><a href="favoris.html">Favoris</a><a href="apropos.html">À propos</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer le thème">◐</button>
+    <a class="header-action" data-whatsapp href="#">WhatsApp</a>
+  </header>
+  <main>
+    <section class="page-hero compact">
+      <p class="eyebrow">Catalogue</p>
+      <h1>Boutique</h1>
+      <p>Parcourez les pièces disponibles et contactez-nous directement pour commander ou vérifier une taille.</p>
+    </section>
+    <section class="section shop-tools">
+      <label class="search-field">
+        <span>Recherche</span>
+        <input data-search type="search" placeholder="Rechercher une pièce, une catégorie...">
+      </label>
+      <label class="sort-field">
+        <span>Trier</span>
+        <select data-sort>
+          <option value="featured">Sélection variée</option>
+          <option value="category">Catégorie</option>
+          <option value="name">Nom</option>
+          <option value="available">Disponibles d'abord</option>
+        </select>
+      </label>
+      <div class="filters" data-filters>
+        <button type="button" data-filter-btn="all" class="active">Tout</button>
+        <button type="button" data-filter-btn="cérémonie">Cérémonie</button>
+        <button type="button" data-filter-btn="quotidien">Quotidien</button>
+        <button type="button" data-filter-btn="vêtements">Vêtements</button>
+        <button type="button" data-filter-btn="famille">Famille</button>
+        <button type="button" data-filter-btn="chaussures">Chaussures</button>
+        <button type="button" data-filter-btn="sacs">Sacs</button>
+        <button type="button" data-filter-btn="montres">Montres</button>
+        <button type="button" data-filter-btn="ceintures">Ceintures</button>
+        <button type="button" data-filter-btn="accessoires">Accessoires</button>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head" id="collections">
+        <div>
+          <p class="eyebrow">Catalogue complet</p>
+          <h2>Articles disponibles et catégories à compléter</h2>
+        </div>
+        <span class="result-count" data-result-count></span>
+      </div>
+      <div class="product-grid" data-product-grid></div>
+      <div class="load-more-row">
+        <button class="btn outline" type="button" data-load-more>Voir plus d'articles</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><img src="img/logo.jpeg" alt="Logo Chic Au Quotidien"><div><h2>Chic Au Quotidien</h2><p>Boutique mode premium à Lomé : vêtements, chaussures, sacs, montres, ceintures et accessoires sélectionnés avec soin.</p></div></div><div class="footer-col"><h3>Raccourcis</h3><a href="index.html">Accueil</a><a href="boutique.html">Boutique</a><a href="favoris.html">Favoris</a><a href="contact.html">Contact</a></div><div class="footer-col"><h3>Contact</h3><a href="tel:+22896689668">+228 96689668</a><a data-whatsapp href="#">WhatsApp</a><span>Lomé, Togo</span></div><div class="footer-col"><h3>Réseaux</h3><div class="social-icons"><a href="#">Ig</a><a href="#">Tk</a><a href="#">Fb</a><a data-whatsapp href="#">Wa</a></div></div></footer>
+  <a class="floating-whatsapp" data-whatsapp href="#" aria-label="Discuter sur WhatsApp">WhatsApp</a>
+</body>
+</html>

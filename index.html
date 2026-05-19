@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chic Au Quotidien | Boutique premium a Lome</title>
+  <meta name="description" content="Chic Au Quotidien, boutique mode premium a Lome : vetements, chaussures et accessoires pour femme, homme, enfant, couple et famille.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="home">
+  <div class="page-loader" aria-hidden="true">
+    <img src="img/logo.jpeg" alt="">
+    <span>Chic Au Quotidien</span>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Chic Au Quotidien accueil">
+      <img src="img/logo.jpeg" alt="Logo Chic Au Quotidien">
+      <strong>Chic Au Quotidien</strong>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="boutique.html#collections">Collections</a>
+      <a href="favoris.html">Favoris</a>
+      <a href="apropos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer le thème">◐</button>
+    <a class="header-action" data-whatsapp href="#">WhatsApp</a>
+  </header>
+
+  <main>
+    <section class="luxury-marquee" aria-label="Signature Chic Au Quotidien">
+      <div>
+        <span>Chic Au Quotidien</span><span>Lomé</span><span>Mode africaine premium</span><span>Commande WhatsApp</span><span>Conseil style</span>
+        <span>Chic Au Quotidien</span><span>Lomé</span><span>Mode africaine premium</span><span>Commande WhatsApp</span><span>Conseil style</span>
+      </div>
+    </section>
+    <section class="hero editorial-hero">
+      <div class="hero-content">
+        <p class="eyebrow">Boutique premium a Lome</p>
+        <h1>Chic Au Quotidien</h1>
+        <p>Des vêtements, chaussures et accessoires choisis pour une élégance africaine moderne, précise et facile à commander.</p>
+        <form class="hero-search" action="boutique.html">
+          <label>
+            <span>Rechercher un article</span>
+            <input name="q" data-search type="search" placeholder="Ex : robe, chaussures, cérémonie, famille...">
+          </label>
+          <button class="btn primary" type="submit">Rechercher</button>
+        </form>
+        <div class="need-filters" data-filters>
+          <button type="button" data-filter-btn="all" class="active">Tout</button>
+          <button type="button" data-filter-btn="cérémonie">Cérémonie</button>
+          <button type="button" data-filter-btn="quotidien">Quotidien</button>
+          <button type="button" data-filter-btn="famille">Famille</button>
+          <button type="button" data-filter-btn="accessoires">Accessoires</button>
+          <button type="button" data-filter-btn="chaussures">Chaussures</button>
+        </div>
+      </div>
+      <div class="hero-showcase" aria-label="Selection visuelle Chic Au Quotidien">
+        <div class="logo-medallion">
+          <img src="img/logo.jpeg" alt="Logo Chic Au Quotidien">
+        </div>
+        <img class="showcase-main" src="img/bannieres/accueil/hero-couple-01.jpeg" alt="Couple en tenue coordonnee">
+        <img class="showcase-side top" src="img/vetements/prêt-à-porter/pourfemme/pourfemme-01.jpeg" alt="Tenue femme premium">
+        <img class="showcase-side bottom" src="img/chaussures/hommes/chaussures_habillées/chaussures-habillees-33.jpeg" alt="Chaussures habillees">
+      </div>
+    </section>
+
+    <section class="section intro-grid">
+      <div>
+        <p class="eyebrow">Notre signature</p>
+        <h2>Une allure africaine, précise et contemporaine.</h2>
+      </div>
+      <p>Chic Au Quotidien rassemble des pièces choisies pour leur présence : coupes nettes, couleurs riches, détails inspirés, et une expérience d'achat directe par WhatsApp.</p>
+    </section>
+
+    <section class="section stats-band">
+      <article><strong data-count-to="130">0</strong><span>articles référencés</span></article>
+      <article><strong data-count-to="9">0</strong><span>univers boutique</span></article>
+      <article><strong data-count-to="1">0</strong><span>commande directe WhatsApp</span></article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Univers</p>
+          <h2>Toute la boutique en un coup d'œil</h2>
+        </div>
+        <a class="text-link" href="boutique.html">Voir tout</a>
+      </div>
+      <div class="universe-grid" id="collections">
+        <a class="collection-card large" href="boutique.html?filter=famille">
+          <img src="img/bannieres/accueil/hero-famille-01.jpeg" alt="Collection famille">
+          <span>Couple & Famille</span>
+        </a>
+        <a class="collection-card" href="boutique.html?filter=femme">
+          <img src="img/vetements/prêt-à-porter/pourfemme/pourfemme-09.jpeg" alt="Collection femme">
+          <span>Vêtements</span>
+        </a>
+        <a class="collection-card" href="boutique.html?filter=chaussures">
+          <img src="img/chaussures/hommes/chaussures_habillées/chaussures-habillees-06.jpeg" alt="Chaussures">
+          <span>Chaussures</span>
+        </a>
+        <a class="collection-card tonal" href="boutique.html?filter=sacs">
+          <span>Sacs</span>
+        </a>
+        <a class="collection-card tonal" href="boutique.html?filter=montres">
+          <span>Montres</span>
+        </a>
+        <a class="collection-card tonal" href="boutique.html?filter=ceintures">
+          <span>Ceintures</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section feature-band">
+      <div>
+        <p class="eyebrow">Service privé</p>
+        <h2>Besoin d'une tenue pour une sortie, une cérémonie ou un shooting ?</h2>
+        <p>Envoyez-nous votre inspiration sur WhatsApp. Nous vous guidons vers les pièces disponibles et les meilleurs accords.</p>
+      </div>
+      <a class="btn primary" data-whatsapp="Bonjour Chic Au Quotidien, j'aimerais etre conseille(e) pour choisir une tenue." href="#">Demander conseil</a>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Selection intelligente</p>
+          <h2>Filtrez selon votre besoin</h2>
+        </div>
+        <a class="text-link" href="boutique.html">Explorer</a>
+      </div>
+      <div class="product-grid featured-grid" data-product-grid data-mode="curated"></div>
+    </section>
+
+    <section class="section style-lab">
+      <div class="style-lab-copy">
+        <p class="eyebrow">Expérience boutique</p>
+        <h2>On ne vend pas seulement des articles. On compose une allure.</h2>
+        <p>Chaque sélection mélange vêtements, chaussures et accessoires pour vous aider à construire un look cohérent : élégant, africain, moderne et adapté à votre moment.</p>
+        <div class="style-points">
+          <span>Cérémonies</span>
+          <span>Sorties</span>
+          <span>Couples</span>
+          <span>Familles</span>
+          <span>Accessoires</span>
+        </div>
+      </div>
+      <div class="style-lab-visual">
+        <img src="img/vetements/prêt-à-porter/famille/famille-07.jpeg" alt="Collection famille prestige">
+        <img src="img/vetements/prêt-à-porter/pourfemme/pourfemme-03.jpeg" alt="Pièce femme graphique">
+      </div>
+    </section>
+
+    <section class="section advisor-section">
+      <div>
+        <p class="eyebrow">Conseil style</p>
+        <h2>Décrivez votre besoin, on prépare le message pour WhatsApp.</h2>
+      </div>
+      <form class="advisor-form" data-style-advisor>
+        <select name="occasion" aria-label="Occasion">
+          <option value="">Occasion</option>
+          <option>Cérémonie</option>
+          <option>Sortie</option>
+          <option>Quotidien chic</option>
+          <option>Shooting</option>
+        </select>
+        <select name="profile" aria-label="Profil">
+          <option value="">Pour qui ?</option>
+          <option>Femme</option>
+          <option>Homme</option>
+          <option>Enfant</option>
+          <option>Couple</option>
+          <option>Famille</option>
+        </select>
+        <select name="type" aria-label="Type d'article">
+          <option value="">Type d'article</option>
+          <option>Vêtements</option>
+          <option>Chaussures</option>
+          <option>Sacs</option>
+          <option>Montres</option>
+          <option>Ceintures</option>
+        </select>
+        <input name="detail" type="text" placeholder="Détail, couleur, taille, urgence...">
+        <button class="btn primary" type="submit">Demander conseil</button>
+      </form>
+    </section>
+
+    <section class="section testimonials">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Avis clients</p>
+          <h2>Une relation simple, directe et soignée.</h2>
+        </div>
+      </div>
+      <div class="testimonial-grid">
+        <article><p>“Très belle sélection, les conseils m'ont aidée à choisir rapidement.”</p><span>Cliente à Lomé</span></article>
+        <article><p>“La commande WhatsApp est pratique, surtout pour vérifier la disponibilité.”</p><span>Client boutique</span></article>
+        <article><p>“Les looks couple et famille donnent vraiment une belle présence.”</p><span>Commande cérémonie</span></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Vu récemment</p>
+          <h2>Vos dernières inspirations</h2>
+        </div>
+      </div>
+      <div class="product-grid" data-product-grid data-mode="recent"></div>
+    </section>
+
+    <section class="section quick-needs">
+      <a href="boutique.html?filter=cérémonie">
+        <span>01</span>
+        <strong>Je cherche une tenue de cérémonie</strong>
+      </a>
+      <a href="boutique.html?filter=quotidien">
+        <span>02</span>
+        <strong>Je veux un look chic du quotidien</strong>
+      </a>
+      <a href="boutique.html?filter=accessoires">
+        <span>03</span>
+        <strong>Je complète avec des accessoires</strong>
+      </a>
+      <a href="boutique.html?filter=famille">
+        <span>04</span>
+        <strong>Je veux coordonner couple ou famille</strong>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="img/logo.jpeg" alt="Logo Chic Au Quotidien">
+      <div>
+        <h2>Chic Au Quotidien</h2>
+        <p>Boutique mode premium basée à Lomé. Vêtements, chaussures, sacs, montres et accessoires pour une élégance africaine moderne, sobre et remarquable.</p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Raccourcis</h3>
+      <a href="boutique.html">Boutique</a>
+      <a href="boutique.html#collections">Collections</a>
+      <a href="favoris.html">Favoris</a>
+      <a href="apropos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <a href="tel:+22896689668">Appeler</a>
+      <a data-whatsapp href="#">WhatsApp</a>
+      <span>Lomé, Togo</span>
+    </div>
+    <div class="footer-col">
+      <h3>Réseaux</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">Ig</a>
+        <a href="#" aria-label="TikTok">Tk</a>
+        <a href="#" aria-label="Facebook">Fb</a>
+        <a data-whatsapp href="#" aria-label="WhatsApp">Wa</a>
+      </div>
+    </div>
+  </footer>
+  <a class="floating-whatsapp" data-whatsapp href="#" aria-label="Discuter sur WhatsApp">WhatsApp</a>
+</body>
+</html>
