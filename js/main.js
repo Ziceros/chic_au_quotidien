@@ -208,16 +208,23 @@ const placeholders = [
   }
 ];
 
+// Fonction pour obtenir le chemin WebP avec fallback JPEG
+function getImagePath(jpegPath) {
+  return jpegPath.replace(/\.jpe?g$/i, '.webp');
+}
+
 const products = [
   ...series.flatMap((item) => Array.from({ length: item.count }, (_, index) => {
     const number = String(index + 1).padStart(2, "0");
+    const jpegImage = `${item.folder}/${item.filePrefix}-${number}.jpeg`;
     return {
       id: `${item.prefix}-${number}`,
       name: item.names[index % item.names.length],
       category: item.category,
       needs: item.needs,
       badge: item.badge,
-      image: `${item.folder}/${item.filePrefix}-${number}.jpeg`,
+      image: getImagePath(jpegImage),
+      imageFallback: jpegImage,
       description: item.descriptions[index % item.descriptions.length],
       rank: index
     };
@@ -314,9 +321,22 @@ function interleaveByCategory(items) {
 }
 
 function productCard(product) {
-  const visual = product.image
-    ? `<img src="${product.image}" alt="${product.name}" loading="lazy">`
-    : `<div class="placeholder-visual"><span>${product.name}</span></div>`;
+  let visual;
+  if (product.image) {
+    // Add onerror to fall back to JPEG if WebP fails, and explicit dimensions
+    visual = `
+      <img 
+        src="${product.image}" 
+        alt="${product.name}" 
+        loading="lazy" 
+        width="400" 
+        height="500"
+        onerror="if(this.src !== '${product.imageFallback}') this.src='${product.imageFallback}'"
+      >
+    `;
+  } else {
+    visual = `<div class="placeholder-visual"><span>${product.name}</span></div>`;
+  }
   const previewAttr = product.image ? `data-preview="${product.id}"` : "";
 
   return `
@@ -507,10 +527,13 @@ function openPreview(product) {
   const similar = getSimilarProducts(product);
   const modal = document.createElement("div");
   modal.className = "preview-modal";
+  
+  let mainImage = `<img src="${product.image}" alt="${product.name}">`;
+
   modal.innerHTML = `
     <div class="preview-dialog" role="dialog" aria-modal="true" aria-label="${product.name}">
       <button class="preview-close" type="button" aria-label="Fermer">Fermer</button>
-      <img src="${product.image}" alt="${product.name}">
+      ${mainImage}
       <div>
         <p class="eyebrow">${product.badge}</p>
         <h2>${product.name}</h2>
@@ -524,7 +547,9 @@ function openPreview(product) {
           <div class="similar-products">
             <h3>À associer</h3>
             <div>
-              ${similar.map((item) => `<button type="button" data-preview="${item.id}"><img src="${item.image}" alt="${item.name}"><span>${item.name}</span></button>`).join("")}
+              ${similar.map((item) => {
+                return `<button type="button" data-preview="${item.id}"><img src="${item.image}" alt="${item.name}"><span>${item.name}</span></button>`;
+              }).join("")}
             </div>
           </div>
         ` : ""}
