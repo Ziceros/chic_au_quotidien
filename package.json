@@ -1,0 +1,15 @@
+{
+  "name": "chic-au-quotidien",
+  "version": "1.0.0",
+  "description": "Boutique de mode premium à Lomé",
+  "main": "index.html",
+  "scripts": {
+    "optimize-images": "node optimize-images.js"
+  },
+  "keywords": ["e-commerce", "mode"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
